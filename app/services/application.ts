@@ -13,8 +13,9 @@ const DB_VERSION = 1
 const STORE_NAME = 'applications'
 const LETTER_GENERATION_DELAY = 3000
 let dbConnection: Promise<IDBDatabase> | null = null
-const openai = new OpenAI({
-  apiKey: import.meta.env.VITE_OPENAI_API_KEY,
+const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY
+const openai = OPENAI_API_KEY && new OpenAI({
+  apiKey: OPENAI_API_KEY,
   dangerouslyAllowBrowser: true
 })
 
@@ -92,7 +93,7 @@ export async function createLetter(
 
   const exampleLetter = generateLetter(application)
 
-  if (!import.meta.env.VITE_OPENAI_API_KEY) {
+  if (!openai) {
     return new Promise((resolve) => {
       setTimeout(() => resolve(exampleLetter), LETTER_GENERATION_DELAY)
     })

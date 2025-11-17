@@ -33,6 +33,8 @@ jobs:
         run: pnpm install
       - name: Build website
         run: pnpm build
+        env:
+          VITE_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
