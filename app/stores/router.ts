@@ -6,10 +6,12 @@ import {
   routeParam
 } from '@kidajs/router'
 
+const base = (import.meta.env.BASE_URL?.replace(/\/$/, '') || '') as ''
+
 export const routes = {
-  home: '/',
-  newApplication: '/application/new',
-  application: '/application/:applicationId'
+  home: `${base}/`,
+  newApplication: `${base}/application/new`,
+  application: `${base}/application/:applicationId`
 } as const
 
 export const paths = buildPaths(routes)

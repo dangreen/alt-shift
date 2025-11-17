@@ -3,8 +3,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import postcssCustomMedia from 'postcss-custom-media'
 
-export default defineConfig({
-  base: './',
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/alt-shift' : '/',
   css: {
     devSourcemap: true,
     postcss: {
@@ -20,4 +20,4 @@ export default defineConfig({
       '~': join(import.meta.dirname, 'app')
     }
   }
-})
+}))
