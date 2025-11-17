@@ -13,10 +13,10 @@ importers:
         version: 1.0.0-alpha.3(kida@1.0.0-alpha.5)(react@19.2.0)
       '@kidajs/react-router':
         specifier: 1.0.0-alpha.1
-        version: 1.0.0-alpha.1(@kidajs/react@1.0.0-alpha.3(kida@1.0.0-alpha.5)(react@19.2.0))(@kidajs/router@1.0.0-alpha.2(kida@1.0.0-alpha.5))(kida@1.0.0-alpha.5)(react@19.2.0)
+        version: 1.0.0-alpha.1(@kidajs/react@1.0.0-alpha.3(kida@1.0.0-alpha.5)(react@19.2.0))(@kidajs/router@1.0.0-alpha.4(kida@1.0.0-alpha.5))(kida@1.0.0-alpha.5)(react@19.2.0)
       '@kidajs/router':
-        specifier: 1.0.0-alpha.2
-        version: 1.0.0-alpha.2(kida@1.0.0-alpha.5)
+        specifier: 1.0.0-alpha.4
+        version: 1.0.0-alpha.4(kida@1.0.0-alpha.5)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -593,11 +593,11 @@ packages:
       kida: ^1.0.0-alpha.3
       react: ^17.0.0 || ^18.0.0 || ^19.0.0
 
-  '@kidajs/router@1.0.0-alpha.2':
-    resolution: {integrity: sha512-5jOpon0n+HK65tRAeygRsgPRLqKoLVq/Whf2U5Toi22BAYa03tlI/nZKT1kupyD/s2O2QKKkCXi1hz+I0itbMA==}
+  '@kidajs/router@1.0.0-alpha.4':
+    resolution: {integrity: sha512-w2LFBwt+rjey+koNymYTgBPKnzN7i0gedI78lEp6SS2t+8CKBc0o5wKxYz3LppyMUDz2+YbRraCjCJPG6rkJ1g==}
     engines: {node: '>=16'}
     peerDependencies:
-      kida: ^1.0.0-alpha.4
+      kida: ^1.0.0-alpha.5
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -4021,10 +4021,10 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@kidajs/react-router@1.0.0-alpha.1(@kidajs/react@1.0.0-alpha.3(kida@1.0.0-alpha.5)(react@19.2.0))(@kidajs/router@1.0.0-alpha.2(kida@1.0.0-alpha.5))(kida@1.0.0-alpha.5)(react@19.2.0)':
+  '@kidajs/react-router@1.0.0-alpha.1(@kidajs/react@1.0.0-alpha.3(kida@1.0.0-alpha.5)(react@19.2.0))(@kidajs/router@1.0.0-alpha.4(kida@1.0.0-alpha.5))(kida@1.0.0-alpha.5)(react@19.2.0)':
     dependencies:
       '@kidajs/react': 1.0.0-alpha.3(kida@1.0.0-alpha.5)(react@19.2.0)
-      '@kidajs/router': 1.0.0-alpha.2(kida@1.0.0-alpha.5)
+      '@kidajs/router': 1.0.0-alpha.4(kida@1.0.0-alpha.5)
       kida: 1.0.0-alpha.5
       react: 19.2.0
 
@@ -4033,7 +4033,7 @@ snapshots:
       kida: 1.0.0-alpha.5
       react: 19.2.0
 
-  '@kidajs/router@1.0.0-alpha.2(kida@1.0.0-alpha.5)':
+  '@kidajs/router@1.0.0-alpha.4(kida@1.0.0-alpha.5)':
     dependencies:
       kida: 1.0.0-alpha.5
 

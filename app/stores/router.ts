@@ -3,16 +3,15 @@ import {
   browserNavigation,
   buildPaths,
   virtualNavigation,
-  routeParam
+  routeParam,
+  basePath
 } from '@kidajs/router'
 
-const base = (import.meta.env.BASE_URL?.replace(/\/$/, '') || '') as ''
-
-export const routes = {
-  home: `${base}/`,
-  newApplication: `${base}/application/new`,
-  application: `${base}/application/:applicationId`
-} as const
+export const routes = basePath(import.meta.env.BASE_URL, {
+  home: '/',
+  newApplication: '/application/new',
+  application: '/application/:applicationId'
+})
 
 export const paths = buildPaths(routes)
 

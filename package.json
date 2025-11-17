@@ -25,7 +25,7 @@
   "dependencies": {
     "@kidajs/react": "1.0.0-alpha.3",
     "@kidajs/react-router": "1.0.0-alpha.1",
-    "@kidajs/router": "1.0.0-alpha.2",
+    "@kidajs/router": "1.0.0-alpha.4",
     "clsx": "^2.1.1",
     "kida": "1.0.0-alpha.5",
     "modern-normalize": "^3.0.1",

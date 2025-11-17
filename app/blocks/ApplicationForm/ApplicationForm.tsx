@@ -124,8 +124,8 @@ export function ApplicationForm({
   return (
     <Form
       ref={formRef}
-      onSubmit={onSubmitCallback}
       className={cx(styles.root, className)}
+      onSubmit={onSubmitCallback}
       aria-busy={isLoading}
       {...props}
     >

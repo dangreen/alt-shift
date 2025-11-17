@@ -1,7 +1,7 @@
 .root {
   grid-template-columns: repeat(2, 1fr);
 
-  & > :nth-child(n + 3) {
+  & > :is(:first-child, :nth-child(n + 4)) {
     grid-column: 1 / -1;
   }
 }
