@@ -1,0 +1,13 @@
+@import '../media.css';
+
+.root {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sizeSpaceXxl) var(--sizeSpaceLg);
+}
+
+@media (--tablet) {
+  .root {
+    grid-template-columns: 1fr;
+  }
+}

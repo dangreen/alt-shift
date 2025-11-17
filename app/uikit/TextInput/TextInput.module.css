@@ -1,0 +1,39 @@
+.root {
+  transition:
+    var(--transitionFocusOutline),
+    border-color var(--durationSm) ease;
+  box-shadow: var(--shadowSm);
+  border: var(--sizeBorder) solid var(--colorGray300);
+  border-radius: var(--sizeRadiusMd);
+  background-color: var(--colorWhite);
+  padding:
+    calc(var(--sizeSpaceXs) - var(--sizeBorder))
+    calc(var(--sizeSpaceMd) - var(--sizeBorder));
+
+  &::placeholder {
+    color: var(--colorGray600);
+  }
+
+  &:disabled {
+    background-color: var(--colorGray100);
+    cursor: not-allowed;
+    color: var(--colorGray500);
+  }
+
+  &:not(:disabled):not(:placeholder-shown) {
+    &:invalid {
+      --colorFocusOutline: var(--colorDangerLighter);
+      border-color: var(--colorDangerLight);
+    }
+
+    &:valid:focus {
+      border-color: var(--colorSuccessLight);
+    }
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .root {
+    transition: none;
+  }
+}

@@ -1,0 +1,59 @@
+:root {
+  /* Colors */
+  --colorGray900: hsl(221deg, 43%, 11%);
+  --colorGray700: hsl(217deg, 23%, 27%);
+  --colorGray650: hsl(215deg, 18%, 34%);
+  --colorGray600: hsl(220deg, 13%, 46%);
+  --colorGray500: hsl(218deg, 15%, 65%);
+  --colorGray300: hsl(216deg, 16%, 84%);
+  --colorGray200: hsl(220deg, 14%, 92%);
+  --colorGray150: hsl(220deg, 17%, 93%);
+  --colorGray100: hsl(220deg, 22%, 96%);
+  --colorGray50: hsla(220deg, 43%, 11%, .05);
+  --colorWhite: white;
+  --colorWhiteTransparent: hsla(0deg, 0%, 100%, .16);
+  --colorBrandPrimary: hsl(153deg, 87%, 24%);
+  --colorBrandLight: hsl(139deg, 73%, 90%);
+  --colorBrandLighter: hsl(140deg, 76%, 96%);
+  --colorSuccessLight: hsl(146deg, 66%, 67%);
+  --colorDanger: hsl(4deg, 86%, 58%);
+  --colorDangerLight: hsl(4deg, 96%, 80%);
+  --colorDangerLighter: hsl(4deg, 95%, 94%);
+
+  /* Sizes - Typography */
+  --sizeFontSm: 14px;
+  --sizeFontMd: 16px;
+  --sizeFontLg: 18px;
+  --sizeFontXl: 36px;
+  --sizeFontXxl: 48px;
+  --sizeLineSm: 20px;
+  --sizeLineMd: 24px;
+  --sizeLineLg: 28px;
+  --sizeLineXl: 44px;
+  --sizeLineXxl: 60px;
+
+  /* Sizes - Borders */
+  --sizeBorder: 1px;
+  --sizeBorderFocus: 4px;
+
+  /* Sizes - Border Radius */
+  --sizeRadiusMd: 6px;
+  --sizeRadiusLg: 12px;
+  --sizeRadiusRound: 50%;
+
+  /* Sizes - Spacing */
+  --sizeSpaceXs: 8px;
+  --sizeSpaceSm: 10px;
+  --sizeSpaceMd: 12px;
+  --sizeSpaceLg: 16px;
+  --sizeSpaceXl: 18px;
+  --sizeSpaceXxl: 24px;
+  --sizeSpaceXxxl: 28px;
+
+  /* Durations */
+  --durationSm: 200ms;
+  --durationLg: 2s;
+
+  /* Shadows */
+  --shadowSm: 0 1px 2px var(--colorGray50);
+}

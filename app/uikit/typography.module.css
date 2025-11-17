@@ -1,0 +1,50 @@
+@import './media.css';
+
+.h1 {
+  margin: 0 0 var(--sizeSpaceLg);
+  line-height: var(--sizeLineXxl);
+  color: var(--colorGray900);
+  font-size: var(--sizeFontXxl);
+  font-weight: 600;
+}
+
+.h2 {
+  margin: 0 0 var(--sizeSpaceMd);
+  line-height: var(--sizeLineXl);
+  color: var(--colorGray900);
+  font-size: var(--sizeFontXl);
+  font-weight: 600;
+}
+
+@media (--mobile) {
+  .h1 {
+    margin: 0 0 var(--sizeSpaceMd);
+    line-height: var(--sizeLineXl);
+    font-size: var(--sizeFontXl);
+  }
+
+  .h2 {
+    margin: 0 0 var(--sizeSpaceSm);
+    line-height: calc(var(--sizeLineXl) * .8);
+    font-size: calc(var(--sizeFontXl) * .8);
+  }
+}
+
+.text {
+  line-height: var(--textSizeLine);
+
+  &.sm {
+    --textSizeLine: var(--sizeLineSm);
+    font-size: var(--sizeFontSm);
+  }
+
+  &.md {
+    --textSizeLine: var(--sizeLineMd);
+    font-size: var(--sizeFontMd);
+  }
+
+  &.lg {
+    --textSizeLine: var(--sizeLineLg);
+    font-size: var(--sizeFontLg);
+  }
+}

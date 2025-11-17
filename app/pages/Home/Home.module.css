@@ -1,0 +1,12 @@
+@import '~/uikit/media.css';
+
+.root {
+  display: grid;
+  gap: var(--sizeSpaceXxl);
+}
+
+@media (--mobile) {
+  .button > :last-child {
+    display: none;
+  }
+}

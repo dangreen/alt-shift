@@ -1,0 +1,51 @@
+.root {
+  --sizeShadowHeight: 40px;
+  --sizeGap: var(--sizeSpaceXs);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.content {
+  outline-offset: calc(var(--sizeSpaceXs) / 2);
+  padding-bottom: calc(var(--sizeShadowHeight) - var(--sizeGap));
+  overflow-y: auto;
+}
+
+.maxLines {
+  --sizeHeight: calc(var(--sizeLineLg) * var(--countLinesMax));
+  display: -webkit-box;
+  min-height: var(--sizeHeight);
+  max-height: var(--sizeHeight);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--countLinesMax);
+}
+
+.footer {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding-top: var(--sizeGap);
+
+  &::before {
+    pointer-events: none;
+    position: absolute;
+    top: calc(-1 * var(--sizeShadowHeight));
+    right: 0;
+    left: 0;
+    background: linear-gradient(180deg, transparent 0%, var(--colorGray100) 100%);
+    height: var(--sizeShadowHeight);
+    content: '';
+  }
+
+  & > * {
+    z-index: 2;
+
+    &:first-child:last-child {
+      margin-left: auto;
+    }
+  }
+}

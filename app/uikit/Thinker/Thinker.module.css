@@ -1,0 +1,44 @@
+@keyframes Float {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-16px);
+    opacity: .48;
+  }
+}
+
+.root {
+  --sizeRoot: 80px;
+  position: relative;
+  animation: Float var(--durationLg) ease-in-out infinite;
+  width: var(--sizeRoot);
+  height: var(--sizeRoot);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .root {
+    animation: none;
+  }
+}
+
+.blur, .sphere {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--sizeRadiusRound);
+}
+
+.blur {
+  filter: blur(40px);
+  background: var(--colorWhite);
+}
+
+.sphere {
+  box-shadow: inset 0 -2px 32px rgba(16, 24, 40, .08);
+  background:
+    radial-gradient(60.16% 60.16% at 74.22% 21.88%, var(--colorWhite) 0%, var(--colorWhiteTransparent) 100%),
+    radial-gradient(100% 100% at 0% 0%, var(--colorWhite) 0%, var(--colorGray300) 100%);
+}

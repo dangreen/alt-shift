@@ -1,0 +1,157 @@
+.root {
+  --buttonSizeIcon: 20px;
+  --buttonSizeIconOffset: var(--sizeSpaceXs);
+  display: inline-flex;
+  gap: var(--buttonSizeIconOffset);
+  align-items: center;
+  justify-content: center;
+  transition:
+    var(--transitionFocusOutline),
+    background-color var(--durationSm) ease,
+    border-color var(--durationSm) ease,
+    color var(--durationSm) ease;
+  box-shadow: var(--shadowSm);
+  border: var(--sizeBorder) solid transparent;
+  border-radius: var(--sizeRadiusMd);
+  cursor: pointer;
+  color: inherit;
+  font-weight: 500;
+
+  &:disabled {
+    border-color: var(--colorGray300);
+    background-color: var(--colorGray300);
+    cursor: not-allowed;
+    color: var(--colorGray500);
+  }
+}
+
+.block {
+  display: flex;
+  width: 100%;
+}
+
+.default {
+  border-color: var(--colorGray300);
+  background-color: var(--colorWhite);
+
+  &:not(:disabled) {
+    &:is(:hover, :focus-visible) {
+      background-color: var(--colorGray100);
+    }
+
+    &:active {
+      background-color: var(--colorGray200);
+    }
+  }
+}
+
+.primary {
+  --colorBackground: var(--colorBrandPrimary);
+  border-color: var(--colorBackground);
+  background-color: var(--colorBackground);
+  color: var(--colorWhite);
+
+  &:not(:disabled) {
+    &:is(:hover, :focus-visible) {
+      background-color: color-mix(in srgb, var(--colorBackground) 90%, white);
+    }
+
+    &:active {
+      background-color: color-mix(in srgb, var(--colorBackground) 80%, black);
+    }
+  }
+
+  &.danger {
+    --colorBackground: var(--colorDanger);
+    --colorFocusOutline: var(--colorDangerLighter);
+  }
+}
+
+.subtle {
+  --colorTextHover: var(--colorGray900);
+  --colorTextActive: var(--colorGray600);
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  color: var(--colorGray650);
+
+  &:is(.sm, .md, .lg) {
+    padding: 0;
+  }
+
+  &.sm {
+    outline-offset: calc(var(--sizeSpaceSm) - var(--sizeBorder));
+  }
+
+  &.md {
+    outline-offset:
+      calc(var(--sizeSpaceSm) - var(--sizeBorder))
+      calc(var(--sizeSpaceXl) - var(--sizeBorder));
+  }
+
+  &.lg {
+    outline-offset:
+      calc(var(--sizeSpaceLg) - var(--sizeBorder))
+      calc(var(--sizeSpaceXxxl) - var(--sizeBorder));
+  }
+
+  &:not(:disabled) {
+    &:is(:hover, :focus-visible) {
+      color: var(--colorTextHover);
+    }
+
+    &:active {
+      color: var(--colorTextActive);
+    }
+  }
+
+  &.danger {
+    --colorFocusOutline: var(--colorDangerLighter);
+    --colorTextHover: var(--colorDanger);
+    --colorTextActive: color-mix(in srgb, var(--colorDanger) 80%, white);
+  }
+}
+
+.sm {
+  padding: calc(var(--sizeSpaceSm) - var(--sizeBorder));
+}
+
+.md {
+  padding:
+    calc(var(--sizeSpaceSm) - var(--sizeBorder))
+    calc(var(--sizeSpaceXl) - var(--sizeBorder));
+}
+
+.lg {
+  --buttonSizeIcon: 24px;
+  --buttonSizeIconOffset: var(--sizeSpaceMd);
+  padding:
+    calc(var(--sizeSpaceLg) - var(--sizeBorder))
+    calc(var(--sizeSpaceXxxl) - var(--sizeBorder));
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  width: var(--buttonSizeIcon);
+  height: var(--textSizeLine);
+
+  & > svg {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &.left {
+    order: -1;
+  }
+
+  &.right {
+    order: 1;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .root {
+    transition: none;
+  }
+}

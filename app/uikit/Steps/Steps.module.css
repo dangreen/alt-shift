@@ -1,0 +1,33 @@
+.root {
+  display: flex;
+  align-items: center;
+}
+
+.md {
+  gap: calc(var(--sizeSpaceXs) / 2);
+}
+
+.lg {
+  gap: var(--sizeSpaceXs);
+}
+
+.step {
+  --sizeHeight: var(--sizeSpaceXs);
+  flex: none;
+  opacity: .24;
+  border-radius: var(--sizeHeight);
+  background: var(--colorGray900);
+  height: var(--sizeHeight);
+
+  &.filled {
+    opacity: 1;
+  }
+}
+
+.md .step {
+  width: var(--sizeHeight);
+}
+
+.lg .step {
+  width: calc(var(--sizeHeight) * 4);
+}

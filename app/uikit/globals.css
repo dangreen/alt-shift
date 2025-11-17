@@ -1,0 +1,11 @@
+body {
+  color: var(--colorGray900);
+  font-family: 'Fixel Text', sans-serif;
+  font-size: var(--sizeFontMd);
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,22 @@
+@import '../media.css';
+
+.root {
+  display: flex;
+  gap: var(--sizeSpaceLg);
+  align-items: start;
+  justify-content: space-between;
+  border-bottom: var(--sizeBorder) solid var(--colorGray150);
+}
+
+.actions {
+  display: flex;
+  gap: var(--sizeSpaceSm);
+  align-items: start;
+  padding: var(--sizeSpaceXs) 0;
+}
+
+@media (--mobile) {
+  .actions {
+    padding: 0;
+  }
+}

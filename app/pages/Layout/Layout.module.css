@@ -1,0 +1,54 @@
+@import '~/uikit/media.css';
+
+.root {
+  margin: 0 auto;
+  padding: 0 calc(var(--sizeSpaceSm) * 4);
+  max-width: 1200px;
+}
+
+.header,
+.actions {
+  display: flex;
+  gap: var(--sizeSpaceXxl);
+  align-items: center;
+}
+
+.header {
+  justify-content: space-between;
+  padding: calc(var(--sizeSpaceLg) * 2) 0;
+}
+
+.logo {
+  display: flex;
+  outline-offset: var(--sizeSpaceXs);
+  border-radius: var(--sizeRadiusMd);
+  height: calc(var(--sizeSpaceXxl) * 2);
+}
+
+.footer {
+  margin: calc(var(--sizeSpaceXxl) * 2) 0;
+}
+
+@media (--tablet) {
+  .root {
+    padding: 0 calc(var(--sizeSpaceSm) * 2);
+  }
+
+  .header {
+    padding: var(--sizeSpaceLg) 0;
+  }
+}
+
+@media (--mobile) {
+  .root {
+    padding: 0 var(--sizeSpaceMd);
+  }
+
+  .logo {
+    height: calc(var(--sizeSpaceXl) * 2);
+  }
+
+  .footer {
+    margin: var(--sizeSpaceXxl) 0;
+  }
+}

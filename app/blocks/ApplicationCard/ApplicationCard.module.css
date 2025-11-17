@@ -1,0 +1,15 @@
+.link {
+  display: flex;
+  transition: var(--transitionFocusOutline), color var(--durationSm) ease;
+  outline-offset: calc(var(--sizeSpaceXs) / 2);
+
+  &:is(:hover, :focus-visible):not(:active) {
+    color: var(--colorGray700);
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .link {
+    transition: none;
+  }
+}

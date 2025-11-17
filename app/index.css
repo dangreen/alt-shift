@@ -1,0 +1,149 @@
+@import 'modern-normalize';
+@import './uikit/variables.css';
+@import './uikit/globals.css';
+
+/* Fixel Display Font Family */
+@font-face {
+  font-family: 'Fixel Display';
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelDisplay-Thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Display';
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelDisplay-ExtraLight.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Display';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelDisplay-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Display';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelDisplay-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Display';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelDisplay-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Display';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelDisplay-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Display';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelDisplay-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Display';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelDisplay-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Display';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelDisplay-Black.woff2') format('woff2');
+}
+
+/* Fixel Text Font Family */
+@font-face {
+  font-family: 'Fixel Text';
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelText-Thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelText-ExtraLight.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelText-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelText-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelText-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelText-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelText-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelText-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fixel Text';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('./assets/fonts/Fixel/FixelText-Black.woff2') format('woff2');
+}

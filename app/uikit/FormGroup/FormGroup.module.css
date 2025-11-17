@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--sizeSpaceMd) / 2);
+}
+
+.label {
+  color: var(--colorGray700);
+  font-weight: 500;
+}
+
+.description {
+  color: var(--colorGray650);
+}
+
+.root:has(:invalid:not(:placeholder-shown)) .description {
+  color: var(--colorDanger);
+}

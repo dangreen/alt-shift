@@ -1,0 +1,10 @@
+.root {
+  border-radius: var(--sizeRadiusLg);
+  background: var(--colorGray100);
+  padding: var(--sizeSpaceXxl);
+  color: var(--colorGray600);
+
+  &.success {
+    background: var(--colorBrandLighter);
+  }
+}

@@ -1,0 +1,45 @@
+name: Tests
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  types:
+    runs-on: ubuntu-latest
+    name: types
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v5
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - name: Install Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Check types
+        run: pnpm test:types
+  lint:
+    runs-on: ubuntu-latest
+    name: lint
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v5
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - name: Install Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Lint files
+        run: pnpm lint

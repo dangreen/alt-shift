@@ -1,0 +1,19 @@
+@import '~/uikit/media.css';
+
+.root {
+  display: flex;
+  gap: var(--sizeSpaceLg);
+  align-items: center;
+  color: var(--colorGray600);
+}
+
+.icon {
+  width: var(--sizeSpaceXxxl);
+  height: var(--sizeSpaceXxxl);
+}
+
+@media (--tablet) {
+  .text {
+    display: none;
+  }
+}

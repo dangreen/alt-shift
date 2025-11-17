@@ -1,0 +1,29 @@
+@import '~/uikit/media.css';
+
+.root {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--sizeSpaceLg) * 2);
+  align-items: start;
+
+  & > :last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: calc(50% - var(--sizeSpaceLg));
+  }
+}
+
+@media (--tablet) {
+  .root {
+    grid-template-columns: 1fr;
+
+    & > :last-child {
+      position: relative;
+      width: auto;
+      height: 80vh;
+    }
+  }
+}
