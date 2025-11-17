@@ -1,7 +1,15 @@
+@import '~/uikit/media.css';
+
 .root {
   gap: var(--sizeSpaceLg);
   padding: 54px;
   color: var(--colorGray600);
+}
+
+@media (--mobile) {
+  .root {
+    padding: var(--sizeSpaceXxl);
+  }
 }
 
 .steps {
