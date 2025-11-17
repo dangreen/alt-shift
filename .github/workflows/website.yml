@@ -35,6 +35,20 @@ jobs:
         run: pnpm build
         env:
           VITE_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          VITE_GITHUB_PAGES: true
+      - name: 404 page
+        run: |
+          cat > ./dist/404.html << 'EOF'
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <script>
+                sessionStorage.redirect = location.pathname;
+                location.replace('/' + location.pathname.split('/')[1])
+              </script>
+            </head>
+          </html>
+          EOF
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
