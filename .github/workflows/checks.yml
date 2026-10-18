@@ -10,8 +10,10 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v5
-      - name: Check editorconfig
+      - name: Install editorconfig-checker
         uses: editorconfig-checker/action-editorconfig-checker@main
+      - name: Check editorconfig
+        run: editorconfig-checker
   storybook:
     runs-on: ubuntu-latest
     name: storybook
